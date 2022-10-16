@@ -32,7 +32,7 @@ SDK path is shown in the first line
 ```bash
 ❯ flutter doctor -v
 [✓] Flutter (Channel stable, 3.3.4, on macOS 12.6 21G115 darwin-x64, locale ja-JP)
-    • Flutter version 3.3.4 on channel stable at /Users/kanata-miyahana/.asdf/installs/flutter/3.3.4-stable
+    • Flutter version 3.3.4 on channel stable at /Users/user/.asdf/installs/flutter/3.3.4-stable
     • Upstream repository git@github.com:flutter/flutter.git
     • Framework revision eb6d86ee27 (9 days ago), 2022-10-04 22:31:45 -0700
     • Engine revision c08d7d5efc
@@ -40,7 +40,7 @@ SDK path is shown in the first line
     • DevTools version 2.15.0
 
 [✓] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
-    • Android SDK at /Users/kanata-miyahana/Library/Android/sdk
+    • Android SDK at /Users/user/Library/Android/sdk
     • Platform android-31, build-tools 31.0.0
     • Java binary at: /Applications/Android Studio.app/Contents/jre/Contents/Home/bin/java
     • Java version OpenJDK Runtime Environment (build 11.0.12+0-b1504.28-7817840)
