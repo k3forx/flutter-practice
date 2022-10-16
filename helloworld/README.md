@@ -75,3 +75,9 @@ SDK path is shown in the first line
 
 • No issues found!
 ```
+
+## Output
+
+### Section 1
+
+<img width="482" alt="スクリーンショット 2022-10-17 0 45 32" src="https://user-images.githubusercontent.com/45956169/196044764-94dfc540-e97e-4cfc-862a-0102083167f9.png">
