@@ -51,6 +51,7 @@ class MyApp extends StatelessWidget {
                   child: Row(
                     children: [
                       Container(
+                        width: 100,
                         margin: const EdgeInsets.symmetric(
                           vertical: 10,
                           horizontal: 15,
