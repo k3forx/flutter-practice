@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
+            const SizedBox(
               width: double.infinity,
               child: Card(
                 color: Colors.blue,
@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
                         ),
                         padding: const EdgeInsets.all(10),
                         child: Text(
-                          tx.amount.toString(),
+                          '\$${tx.amount}',
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
