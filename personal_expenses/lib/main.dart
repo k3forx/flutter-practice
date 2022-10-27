@@ -45,9 +45,12 @@ class MyApp extends StatelessWidget {
                 child: Text('Chart'),
               ),
             ),
-            Card(
-              color: Colors.red,
-              child: Text('LIST OF Tx'),
+            Column(
+              children: transactions.map((tx) {
+                return Card(
+                  child: Text(tx.title),
+                );
+              }).toList(),
             ),
           ],
         ),
