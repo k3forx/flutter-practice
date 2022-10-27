@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:personal_expenses/transaction.dart';
 
 void main() {
@@ -84,7 +85,7 @@ class MyApp extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            tx.date.toString(),
+                            DateFormat('yyyy-MM-dd HH:mm:ss').format(tx.date),
                             style: const TextStyle(
                               fontSize: 14,
                               color: Colors.grey,
