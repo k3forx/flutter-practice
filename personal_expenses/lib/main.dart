@@ -51,6 +51,17 @@ class MyApp extends StatelessWidget {
                   child: Row(
                     children: [
                       Container(
+                        margin: const EdgeInsets.symmetric(
+                          vertical: 10,
+                          horizontal: 15,
+                        ),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 2,
+                          ),
+                        ),
+                        padding: const EdgeInsets.all(10),
                         child: Text(tx.amount.toString()),
                       ),
                       Column(
