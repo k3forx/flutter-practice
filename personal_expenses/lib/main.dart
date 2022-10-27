@@ -1,11 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:personal_expenses/transaction.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final List<Transaction> transactions = [
+    Transaction(
+      id: 't1',
+      title: 'New shoes',
+      amount: 69.99,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't2',
+      title: 'Weekly Groceries',
+      amount: 16.53,
+      date: DateTime.now(),
+    )
+  ];
+
+  MyApp({
+    super.key,
+  });
 
   // This widget is the root of your application.
   @override
@@ -16,6 +34,8 @@ class MyApp extends StatelessWidget {
           title: const Text('PERSONAL EXPENSES'),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
               width: double.infinity,
@@ -26,6 +46,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             Card(
+              color: Colors.red,
               child: Text('LIST OF Tx'),
             ),
           ],
