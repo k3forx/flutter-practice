@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:personal_expenses/transaction.dart';
+import 'package:personal_expenses/models/transaction.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,6 +22,12 @@ class MyApp extends StatelessWidget {
     )
   ];
 
+  // String titleInput = '';
+  // String amountInput = '';
+
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
+
   MyApp({
     super.key,
   });
@@ -35,7 +41,7 @@ class MyApp extends StatelessWidget {
           title: const Text('PERSONAL EXPENSES'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(
@@ -44,6 +50,41 @@ class MyApp extends StatelessWidget {
                 color: Colors.blue,
                 elevation: 5,
                 child: Text('Chart'),
+              ),
+            ),
+            Card(
+              elevation: 5,
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextField(
+                      decoration: const InputDecoration(
+                        labelText: 'Title',
+                      ),
+                      controller: titleController,
+                    ),
+                    TextField(
+                      decoration: const InputDecoration(
+                        labelText: 'Amount',
+                      ),
+                      controller: amountController,
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        print(titleController.text);
+                        print(amountController.text);
+                      },
+                      child: const Text(
+                        'Add Transaction',
+                        style: TextStyle(
+                          color: Colors.purple,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             Column(
