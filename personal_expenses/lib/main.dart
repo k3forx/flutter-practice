@@ -6,9 +6,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // String titleInput = '';
-  // String amountInput = '';
-
   final titleController = TextEditingController();
   final amountController = TextEditingController();
 
@@ -16,7 +13,6 @@ class MyApp extends StatelessWidget {
     super.key,
   });
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,20 +20,22 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('PERSONAL EXPENSES'),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: const [
-            SizedBox(
-              width: double.infinity,
-              child: Card(
-                color: Colors.blue,
-                elevation: 5,
-                child: Text('Chart'),
+        body: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: const [
+              SizedBox(
+                width: double.infinity,
+                child: Card(
+                  color: Colors.blue,
+                  elevation: 5,
+                  child: Text('Chart'),
+                ),
               ),
-            ),
-            UserTransactions(),
-          ],
+              UserTransactions(),
+            ],
+          ),
         ),
       ),
     );
