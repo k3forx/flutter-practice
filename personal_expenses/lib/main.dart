@@ -101,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ],
       ),
+      // キーボードを表示した時にエラーにならないためのSingleChildScrollView
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
