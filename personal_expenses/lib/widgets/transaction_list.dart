@@ -3,17 +3,17 @@ import 'package:intl/intl.dart';
 import 'package:personal_expenses/models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
-  final List<Transaction> transaction;
+  final List<Transaction> transactions;
 
-  const TransactionList({super.key, required this.transaction});
+  const TransactionList({super.key, required this.transactions});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 300,
       child: ListView.builder(
-        itemBuilder: (buildContext, index) {
-          Transaction tx = transaction[index];
+        itemBuilder: (ctx, index) {
+          Transaction tx = transactions[index];
           return Card(
             child: Row(
               children: [
@@ -64,7 +64,7 @@ class TransactionList extends StatelessWidget {
             ),
           );
         },
-        itemCount: transaction.length,
+        itemCount: transactions.length,
       ),
     );
   }
