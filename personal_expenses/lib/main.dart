@@ -24,29 +24,29 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Platform.isIOS
-        ? const CupertinoApp(
-            title: 'Personal Expenses',
-            theme: CupertinoThemeData(primaryColor: Colors.purple),
-            home: MyHomePage(),
-          )
-        : MaterialApp(
-            title: 'Personal Expenses',
-            theme: ThemeData(
-              colorScheme: ColorScheme.fromSwatch(
-                primarySwatch: Colors.purple,
-              ).copyWith(
-                secondary: Colors.amber,
-              ),
-              primarySwatch: Colors.purple,
-              fontFamily: 'Quicksand',
-              appBarTheme: AppBarTheme(
-                // ignore: deprecated_member_use
-                textTheme: ThemeData.light().textTheme.copyWith(),
-              ),
-            ),
-            home: const MyHomePage(),
-          );
+    // return Platform.isIOS
+    //     ? const CupertinoApp(
+    //         title: 'Personal Expenses',
+    //         theme: CupertinoThemeData(primaryColor: Colors.black),
+    //         home: MyHomePage(),
+    //       )
+    return MaterialApp(
+      title: 'Personal Expenses',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.purple,
+        ).copyWith(
+          secondary: Colors.amber,
+        ),
+        primarySwatch: Colors.purple,
+        fontFamily: 'Quicksand',
+        appBarTheme: AppBarTheme(
+          // ignore: deprecated_member_use
+          textTheme: ThemeData.light().textTheme.copyWith(),
+        ),
+      ),
+      home: const MyHomePage(),
+    );
   }
 }
 
@@ -159,7 +159,10 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text('Show Chart'),
+                  Text(
+                    'Show Chart',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
                   Switch.adaptive(
                     value: _showChart,
                     onChanged: (val) => {
