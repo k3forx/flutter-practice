@@ -57,7 +57,6 @@ class MealItem extends StatelessWidget {
         )
         .then((result) => {
               // MealDetailScreenのNavigator.of(context).pop()の結果を受け取る
-              print(result),
               if (result != null) {removeItem(result)}
             });
   }

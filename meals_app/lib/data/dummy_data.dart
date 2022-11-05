@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meals_app/models/category.dart';
 import 'package:meals_app/models/meal.dart';
 
+// ignore: constant_identifier_names
 const DUMMY_CATEGORIES = [
   Category(
     id: 'c1',
