@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'MyShop',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -32,8 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: const Center(),
+      appBar: AppBar(
+        title: const Text('MyShop'),
+      ),
+      body: const Center(
+        child: Text('Let\'s build a shop!'),
+      ),
     );
   }
 }
